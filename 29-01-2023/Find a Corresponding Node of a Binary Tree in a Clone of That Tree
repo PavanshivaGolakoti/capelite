@@ -1,0 +1,23 @@
+class Solution {
+    public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
+        if(cloned==null)
+            return cloned;
+        result(cloned,target);
+        return cur;
+        
+    }
+    TreeNode cur;
+    public void result(TreeNode cloned,TreeNode target){
+        if(cloned==null)
+            return ;
+        if(cloned.val==target.val){
+            cur=cloned;
+            return;}
+        result(cloned.right,target);
+        if(cur==null)
+        result(cloned.left,target);
+        return;
+        }
+        
+        
+    }
